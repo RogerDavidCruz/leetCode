@@ -19,7 +19,7 @@
 // Output: 4
 
 var singleNumber = function(nums) {
-     nums.sort();
+    nums.sort();
     let num = [];
     for (let i = 0; i<nums.length-1; i++){
         if (nums[i] === nums[i+1]){
