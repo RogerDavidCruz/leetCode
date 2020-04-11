@@ -46,51 +46,37 @@
   * @return {ListNode}
   */
 
- const listSize = nodeSize(head);
-   let middleNodeNumber = Math.ceil(listSize / 2);
-   let resultMiddleNode = head;
-   if (listSize %2 == 0){
-     middleNodeNumber = middleNodeNumber +1;
-   }
-   for (let i = 1; i < middleNodeNumber; i++ )
-   {
-       resultMiddleNode = resultMiddleNode.next;
-   }
-   return resultMiddleNode;
- }
-
- var middleNode = function(head) {
-       const listSize = nodeSize(head);
-   let middleNodeNumber = Math.ceil(listSize / 2);
-   let resultMiddleNode = head;
-   if (listSize %2 == 0){
-     middleNodeNumber = middleNodeNumber +1;
-   }
-   for (let i = 1; i < middleNodeNumber; i++ )
-   {
-       resultMiddleNode = resultMiddleNode.next;
-   }
-   return resultMiddleNode;
- }
-
- /**
-  * @param {ListNode} head
-  * @return {Number}
-  */
- function nodeSize(head) {
-   let size = 1;
-   let node = head;
-   if (node == null)
-   {
-     return 0;
-   }
-   else
-   {
-     while (node.next != null)
-     {
-       node = node.next;
-       size++;
-     }
-   }
-   return size;
- };
+  function middleNode(head) {
+    const listSize = nodeSize(head);
+    let middleNodeNumber = Math.ceil(listSize / 2);
+    let resultMiddleNode = head;
+    if (listSize %2 == 0){
+      middleNodeNumber = middleNodeNumber +1;
+    }
+    for (let i = 1; i < middleNodeNumber; i++ )
+    {
+        resultMiddleNode = resultMiddleNode.next;
+    }
+    return resultMiddleNode;
+  }
+  /**
+   * @param {ListNode} head
+   * @return {Number}
+   */
+  function nodeSize(head) {
+    let size = 1;
+    let current = head;
+    if (head == null)
+    {
+      return 0;
+    }
+    else
+    {
+      while (current.next != null)
+      {
+        current = current.next;
+        size++;
+      }
+    }
+    return size;
+  }
