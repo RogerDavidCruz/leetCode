@@ -2,7 +2,7 @@
 // https://leetcode.com/problems/two-sum/
 
 //Attempt #1
-//Correct Solution - passed all tests
+//Correct Solution - passed all LeetCode Test cases
 
 function twoSum(arr, target) {
     let indexes = [];
